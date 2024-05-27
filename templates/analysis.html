@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cybersecurity Analysis - Results</title>
+    <link rel="stylesheet" href="static/styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h2>Summary</h2>
+            <p>Analysis Results:</p>
+            <ul>
+                <li><a href="/">Back to Home</a></li>
+                <!-- Add other options as needed -->
+            </ul>
+        </div>
+        <div class="main">
+            <h1>Analysis Results</h1>
+            <div id="visualization">
+                <!-- Display analysis results here -->
+                <!-- Example: -->
+                <p>{{ analysis_results }}</p>
+                <!-- You can iterate over analysis results and display graphs -->
+                <iframe src="./plot.html" width="100%" height="600px" frameborder="0"></iframe>
+                <!-- Adjust width, height, and other attributes as needed -->
+            </div>
+        </div>
+    </div>
+    <script src="static/scripts.js"></script>
+</body>
+</html>

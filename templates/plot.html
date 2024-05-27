@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cybersecurity Analysis</title>
+    <!-- Include necessary CSS/JS libraries here -->
+    <link rel="stylesheet" href="static/styles.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <!-- Visualization 1: Scatter Plot -->
+    <div id="scatter_plot" style="width: 800px; height: 600px;"></div>
+    <script>
+        // JavaScript code for Scatter Plot
+        const sourcePort = [/* Your list of source ports */];
+        const destinationPort = [/* Your list of destination ports */];
+        const attackCategory = ['Reconnaissance', 'Exploits', 'DoS', 'Generic', 'Shellcode',
+       ' Fuzzers', 'Worms', 'Backdoors', 'Analysis', ' Fuzzers ',
+       ' Reconnaissance ', 'Backdoor', ' Shellcode ', 'Reconnaissance '];
+
+        const trace1 = {
+            x: sourcePort,
+            y: destinationPort,
+            mode: 'markers',
+            marker: {
+                color: attackCategory,
+                size: 12,
+                line: {
+                    color: 'rgba(217, 217, 217, 0.14)',
+                    width: 0.5
+                }
+            },
+            type: 'scatter'
+        };
+
+        const data = [trace1];
+        const layout = {
+            title: 'Scatter Plot',
+            xaxis: { title: 'Source Port' },
+            yaxis: { title: 'Destination Port' }
+        };
+        Plotly.newPlot('scatter_plot', data, layout);
+    </script>
+
+    <!-- Visualization 2: Bar Plot -->
+    <div id="bar_plot" style="width: 800px; height: 600px;"></div>
+    <script>
+        // JavaScript code for Bar Plot
+        const attackCategories = ['Reconnaissance', 'Exploits', 'DoS', 'Generic', 'Shellcode',
+       ' Fuzzers', 'Worms', 'Backdoors', 'Analysis', ' Fuzzers ',
+       ' Reconnaissance ', 'Backdoor', ' Shellcode ', 'Reconnaissance '];
+        const attackCounts = [/* Corresponding list of attack counts */];
+
+        const trace2 = {
+            x: attackCategories,
+            y: attackCounts,
+            type: 'bar'
+        };
+
+        const data2 = [trace2];
+        const layout2 = {
+            title: 'Number of attacks per Attack category',
+            xaxis: { title: 'Attack Category' },
+            yaxis: { title: 'Count' }
+        };
+        Plotly.newPlot('bar_plot', data2, layout2);
+    </script>
+
+    <!-- Visualization 3: Heatmap -->
+    <div id="heatmap" style="width: 800px; height: 600px;"></div>
+    <script>
+        // JavaScript code for Heatmap
+        const heatmapData = {
+            /* Your heatmap data object */
+        };
+
+        const layout3 = {
+            /* Your heatmap layout object */
+        };
+
+        Plotly.newPlot('heatmap', heatmapData, layout3);
+    </script>
+
+    <!-- Other visualizations -->
+    <!-- Include additional visualizations in a similar manner -->
+
+</body>
+</html>

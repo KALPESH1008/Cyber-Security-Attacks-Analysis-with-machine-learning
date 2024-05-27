@@ -1,0 +1,46 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    flex: 1;
+    padding: 20px;
+    background-color: #333;
+    color: #fff;
+}
+
+.sidebar h2 {
+    color: #ffcc00;
+    margin-top: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.main {
+    flex: 3;
+    padding: 20px;
+}
+
+.main h1 {
+    color: #333;
+}
+
+/* Define your styles for specific elements as needed */
